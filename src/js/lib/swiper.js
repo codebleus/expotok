@@ -10,14 +10,10 @@ if (document.querySelector('.clients__slider')) {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 40,
-    autoplay: {
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
     breakpoints: {
       768: {
         slidesPerView: 5,
-        spaceBetween: 120,
+        spaceBetween: 150,
       },
     },
   });
