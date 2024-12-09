@@ -13,7 +13,7 @@ if (document.querySelector('.clients__slider')) {
     breakpoints: {
       768: {
         slidesPerView: 5,
-        spaceBetween: 200,
+        spaceBetween: 150,
       },
     },
   });
