@@ -1,0 +1,266 @@
+.about {
+  position: relative;
+
+  padding: 20rem 0;
+
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+
+    width: 43.2rem;
+    height: 43.2rem;
+    border: 1px solid #cfcfcf;
+
+    transform: translate(48rem, 14rem) rotate(45deg);
+
+    @media (min-width: 48em) {
+      animation: rect1 10s ease 5s infinite;
+    }
+
+    @media (max-width: 48em) {
+      top: auto;
+      bottom: 0;
+
+      width: 44.8rem;
+      height: 44.8rem;
+
+      transform: translate(38rem, -45rem) rotate(45deg);
+    }
+  }
+
+  // .about__container
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    column-gap: 6rem;
+
+    @media (max-width: 48em) {
+      flex-direction: column;
+      row-gap: 4.8rem;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+
+      width: 90rem;
+      height: 90rem;
+      border: 1px solid #cfcfcf;
+
+      @media (max-width: 48em) {
+        top: auto;
+        bottom: 0;
+
+        width: 93.2rem;
+        height: 93.2rem;
+      }
+    }
+
+    &::before {
+      @media (min-width: 48em) {
+        animation: rect2 10s ease 5s infinite;
+      }
+    }
+
+    &::after {
+      transform: translate(101rem, -29rem) rotate(45deg);
+
+      @media (min-width: 48em) {
+        animation: rect3 10s ease 5s infinite;
+      }
+
+      @media (max-width: 48em) {
+        transform: translate(73rem, -1rem) rotate(45deg);
+      }
+    }
+
+    &::before {
+      width: 67.4rem;
+      height: 67.4rem;
+
+      transform: translate(85rem, -18rem) rotate(45deg);
+
+      @media (max-width: 48em) {
+        width: 69.8rem;
+        height: 69.8rem;
+
+        transform: translate(56rem, -13rem) rotate(45deg);
+      }
+    }
+  }
+
+  // .about__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 48em) {
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+
+      column-gap: 6rem;
+
+      &:first-child {
+        flex: 0 0 72rem;
+      }
+
+      &:last-child {
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  // .about__title
+
+  &__title {
+    margin-bottom: 2.2rem;
+
+    @media (max-width: 48em) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  // .about__text-wrap
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    line-height: 144%;
+
+    @media (max-width: 48em) {
+      row-gap: 4rem;
+    }
+  }
+
+  // .about__txt
+
+  &__txt {
+  }
+
+  // .about__numbers
+
+  &__numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.4rem;
+    row-gap: 6rem;
+
+    @media (max-width: 48em) {
+      margin-bottom: 8rem;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 4.8rem;
+    }
+  }
+
+  // .about__numbers-item
+
+  &__numbers-item {
+  }
+
+  // .about__btn
+
+  &__btn {
+    justify-content: space-between;
+
+    @media (min-width: 48em) {
+      margin-top: auto;
+    }
+  }
+}
+
+.numbers-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  @media (min-width: 48em) {
+    row-gap: 1.2rem;
+  }
+
+  // .numbers-item__heading
+
+  &__heading {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 5.8rem;
+    line-height: 7.1rem;
+    text-transform: uppercase;
+
+    color: #ed1c24;
+
+    @media (max-width: 48em) {
+      font-size: 6.8rem;
+      line-height: 8.2rem;
+    }
+  }
+
+  // .numbers-item__txt
+
+  &__txt {
+  }
+}
+
+@keyframes rect1 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  30% {
+    top: 11rem;
+    right: 18rem;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+@keyframes rect2 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  30% {
+    top: 0;
+    right: -11rem;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+@keyframes rect3 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  30% {
+    right: 2rem;
+    top: -6rem;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}

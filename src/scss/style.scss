@@ -1,0 +1,83 @@
+// -------------------------------- variables -------------------------------
+
+// colors
+$txtColor: #1f1f1f;
+$bgColor: #eff0f4;
+$white: #ffffff;
+$red: #ed1c24;
+$gray: #3d3d3d;
+
+// ---------------------------------- fonts ---------------------------------
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+// ------------------------------- base styles ------------------------------
+
+@import 'base/header';
+@import 'base/footer';
+@import 'base/modals';
+@import 'base/dummy';
+
+// base scss file
+@import 'base/set';
+
+.modal-show,
+._menu-opened {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  overflow-x: clip;
+}
+
+.vjs-tech {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+@media (max-width: 48em) {
+  [data-accordion-body] {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+
+    ._is-active & {
+      grid-template-rows: 1fr;
+    }
+
+    > * {
+      overflow: hidden;
+    }
+  }
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+// --------------------------------------------------------------------------
+
+// common styles
+@import 'common/btn';
+@import 'common/typo';
+@import 'common/form';
+
+// sections
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/portfolio';
+@import 'sections/clients';
+@import 'sections/services';
+@import 'sections/reviews';
+@import 'sections/request';
