@@ -10,6 +10,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 48em) {
+      &.container {
+        width: 170rem;
+      }
+    }
   }
 
   // .clients__title
