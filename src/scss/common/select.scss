@@ -1,0 +1,225 @@
+.select {
+  position: relative;
+
+  // .select__body
+
+  &__body {
+    position: relative;
+  }
+
+  // .select__title
+
+  &__title {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    font-family: 'Roboto';
+    line-height: 130%;
+    font-size: 1.6rem;
+    color: #ffffff;
+
+    background-color: $gray;
+
+    @media (max-width: 48em) {
+      font-family: 'Roboto';
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  // .select__value
+
+  &__value {
+    padding: 1.4rem 2.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    border: 2px solid $white;
+
+    > * {
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: 48em) {
+      padding: 2.8rem 4rem;
+
+      &::after {
+        flex: 0 0 4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+
+    &::after {
+      content: '';
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      background: url(@img/icons/sl-arr.svg) center / contain no-repeat;
+
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // .select__content
+
+  &__content {
+    margin-right: auto;
+    // hide / show selected value
+    ._has-label & {
+      &:not(._is-filled &) {
+        display: none;
+      }
+    }
+  }
+
+  // .select__text
+
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  // .select__input
+
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+  }
+
+  // .select__options
+
+  &__options {
+    position: absolute;
+    z-index: 3;
+    top: 96%;
+    left: 0;
+
+    min-width: 100%;
+    border: 2px solid $white;
+    border-top: none;
+
+    background-color: $gray;
+  }
+
+  // .select__scroll
+
+  &__scroll {
+    // // maximum height
+    max-height: 19rem;
+
+    // // scrollbar styles
+    &.simplebar-scrollable-y {
+      .simplebar-track.simplebar-vertical {
+        right: 1.2rem;
+        width: 0.4rem;
+        border-radius: 0.8rem;
+        background-color: #e4e7ee;
+      }
+      .simplebar-scrollbar {
+        min-height: 3.2rem;
+        border-radius: 0.8rem;
+        background-color: #a2adc1;
+      }
+    }
+  }
+
+  // .select__option
+  &__option {
+    padding: 1.5rem 2.4rem;
+
+    width: 100%;
+
+    color: $white;
+
+    transition: background-color 0.3s ease;
+
+    @media (max-width: 48em) {
+      padding: 3rem 4rem;
+
+      font-family: 'Roboto';
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:hover {
+      background-color: $gray;
+    }
+
+    &._is-selected {
+      font-weight: 500;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &:not(&.select__subtitle) {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // .select__group
+
+  &__group {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  // .select__asset
+
+  &__asset {
+  }
+
+  // .select__text
+
+  &__text {
+  }
+
+  // .select__hint
+
+  &__hint {
+  }
+
+  // .select__subtitle
+
+  &__subtitle {
+    cursor: text;
+  }
+
+  // select state
+  &._is-opened {
+    z-index: 5;
+    .select__value::after {
+      transform: rotate(-180deg);
+    }
+  }
+  &._has-error {
+    &:not(&._is-filled, &._is-opened) {
+      .select__value._select-label {
+        &::before {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+// list
+._select-list {
+  cursor: pointer;
+}

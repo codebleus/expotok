@@ -26,4 +26,19 @@ window.addEventListener('load', function () {
       });
     });
   }
+
+  if (document.querySelector('.portfolio-in__filters-btn')) {
+    document
+      .querySelector('.portfolio-in__filters-btn')
+      .addEventListener('click', function () {
+        document.documentElement.classList.add('_show-filters');
+      });
+  }
+  if (document.querySelector('.filters-portfolio-in__btn')) {
+    document
+      .querySelector('.filters-portfolio-in__btn')
+      .addEventListener('click', function () {
+        document.documentElement.classList.remove('_show-filters');
+      });
+  }
 });

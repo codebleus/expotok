@@ -25,7 +25,8 @@ $gray: #3d3d3d;
 @import 'base/set';
 
 .modal-show,
-._menu-opened {
+._menu-opened,
+._show-filters {
   overflow: hidden;
 }
 
@@ -72,6 +73,10 @@ main {
 @import 'common/btn';
 @import 'common/typo';
 @import 'common/form';
+@import 'common/select';
+
+// lib
+@import 'lib/nouislider';
 
 // sections
 @import 'sections/hero';
