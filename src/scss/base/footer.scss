@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 0.5rem;
+  padding-top: 20rem;
   padding-bottom: 3rem;
 
   color: $white;
@@ -7,7 +7,6 @@
   background-color: $gray;
 
   @media (max-width: 48em) {
-    padding-top: 0;
     padding-bottom: 12rem;
   }
 

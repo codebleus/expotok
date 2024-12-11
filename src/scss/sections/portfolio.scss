@@ -304,13 +304,9 @@
 }
 
 .portfolio-in {
-  padding: 20rem 0;
+  padding-top: 20rem;
 
   background-color: $gray;
-
-  @media (max-width: 48em) {
-    padding: 22rem 0;
-  }
 
   // .portfolio-in__container
 
@@ -390,8 +386,11 @@
   // .portfolio-in__label
 
   &__label {
-    color: $white;
     line-height: 130%;
+
+    &.txt16 {
+      color: $white;
+    }
   }
 
   // .portfolio-in__select
@@ -447,6 +446,45 @@
     transform: none;
   }
 
+  &__head {
+    padding: 2.8rem 0;
+    margin-bottom: 6.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__reset-btn {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.6rem;
+
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4rem;
+
+    &::after {
+      content: '';
+
+      flex: 0 0 4.8rem;
+      width: 4.8rem;
+      height: 4.8rem;
+
+      background: url(@img/icons/trash.svg) center / contain no-repeat;
+    }
+  }
+
+  &__btn {
+    margin-top: 17rem;
+
+    order: 1;
+  }
+
+  .portfolio-in__filters {
+    margin-bottom: auto;
+  }
+
   // .filters-portfolio-in__container
 
   &__container {
@@ -455,16 +493,13 @@
 
     &.container {
       padding-top: 3.2rem;
-      padding-bottom: 3.2rem;
+      padding-bottom: 4.8rem;
     }
   }
 
-  // .filters-portfolio-in__btn
+  // .filters-portfolio-in__head-btn
 
-  &__btn {
-    padding: 2.8rem 0;
-    margin-bottom: 6.4rem;
-
+  &__head-btn {
     display: flex;
     align-items: center;
     column-gap: 6.4rem;

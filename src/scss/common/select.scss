@@ -77,6 +77,9 @@
 
   &__content {
     margin-right: auto;
+
+    color: $white;
+
     // hide / show selected value
     ._has-label & {
       &:not(._is-filled &) {
@@ -105,55 +108,131 @@
   &__options {
     position: absolute;
     z-index: 3;
-    top: 96%;
+    top: calc(100% + 0.8rem);
     left: 0;
 
+    padding: 2.4rem;
+
+    // display: flex;
     min-width: 100%;
     border: 2px solid $white;
-    border-top: none;
 
     background-color: $gray;
+
+    @media (max-width: 48em) {
+      top: calc(100% + 1.6rem);
+
+      padding: 4.8rem 4rem;
+    }
   }
 
   // .select__scroll
 
   &__scroll {
     // // maximum height
-    max-height: 19rem;
+    // max-height: 58.4rem;
 
     // // scrollbar styles
     &.simplebar-scrollable-y {
       .simplebar-track.simplebar-vertical {
-        right: 1.2rem;
+        right: 0;
+
         width: 0.4rem;
-        border-radius: 0.8rem;
-        background-color: #e4e7ee;
+
+        background-color: rgba(255, 255, 255, 0.2);
       }
       .simplebar-scrollbar {
-        min-height: 3.2rem;
-        border-radius: 0.8rem;
-        background-color: #a2adc1;
+        min-height: 8rem;
+
+        background-color: $white;
       }
     }
   }
 
   // .select__option
   &__option {
-    padding: 1.5rem 2.4rem;
+    position: relative;
 
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
     width: 100%;
 
+    font-family: 'Roboto';
     color: $white;
+    line-height: 130%;
+    font-size: 1.6rem;
 
     transition: background-color 0.3s ease;
 
-    @media (max-width: 48em) {
-      padding: 3rem 4rem;
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
 
-      font-family: 'Roboto';
+      @media (max-width: 48em) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &._is-selected {
+      &::before {
+        border: 2px solid $white;
+
+        background-color: $white;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: '';
+
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      border: 2px solid rgba(255, 255, 255, 0.4);
+
+      transition: border 0.3s ease, background-color 0.3s ease;
+
+      @media (max-width: 48em) {
+        flex: 0 0 4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0.8rem;
+      left: 0.5rem;
+
+      width: 1.4rem;
+      height: 0.9rem;
+
+      background: url(@img/icons/check.svg) center / contain no-repeat;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
+
+      @media (max-width: 48em) {
+        top: 1.6rem;
+        left: 1rem;
+
+        width: 2.4rem;
+        height: 1.8rem;
+      }
+    }
+
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+
       font-size: 2.8rem;
       line-height: 3.2rem;
-      color: rgba(255, 255, 255, 0.4);
     }
 
     &:hover {

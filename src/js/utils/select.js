@@ -524,7 +524,7 @@ export class Select {
       : null;
     let selScrollHeight =
       relativeSel.dataset.selScroll && data
-        ? `style="max-height:${window.innerWidth > 768 ? data[0] : data[1]}rem"`
+        ? `style="max-height:${relativeSel.dataset.selScroll}px"`
         : '';
     let selOptions = Array.from(relativeSel.options);
 
@@ -689,3 +689,14 @@ if (document.querySelectorAll('[data-simplebar]').length) {
 }
 
 // --------------------------------------------------------------------------
+
+document.addEventListener('selection', function (e) {
+  if (
+    e.detail.select.nextElementSibling &&
+    e.detail.select.nextElementSibling.querySelector('.select__content')
+  ) {
+    const content =
+      e.detail.select.nextElementSibling.querySelector('.select__content');
+    content.innerText = content.innerText.trim().split(',').join(', ');
+  }
+});

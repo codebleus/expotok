@@ -34,9 +34,9 @@ window.addEventListener('load', function () {
         document.documentElement.classList.add('_show-filters');
       });
   }
-  if (document.querySelector('.filters-portfolio-in__btn')) {
+  if (document.querySelector('.filters-portfolio-in__head-btn')) {
     document
-      .querySelector('.filters-portfolio-in__btn')
+      .querySelector('.filters-portfolio-in__head-btn')
       .addEventListener('click', function () {
         document.documentElement.classList.remove('_show-filters');
       });

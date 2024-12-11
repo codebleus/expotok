@@ -56,7 +56,7 @@
 					<div data-da=".filters-portfolio-in__container,768,last" data-select-single class="portfolio-in__filters">
 						<div class="portfolio-in__group">
 							<span class="portfolio-in__label txt16">Название выставки</span>
-							<select name="form[]" class="portfolio-in__select select">
+							<select data-sel-scroll="292" multiple name="form[]" class="portfolio-in__select select">
 								<option value="1" selected>Экспо</option>
 								<option value="2">Пункт №2</option>
 								<option value="3">Пункт №3</option>
@@ -65,8 +65,11 @@
 						</div>
 						<div class="portfolio-in__group">
 							<span class="portfolio-in__label txt16">Год</span>
-							<select name="form[]" class="portfolio-in__select select">
+							<select data-sel-scroll="246" multiple name="form[]" class="portfolio-in__select select">
 								<option value="1" selected>2022</option>
+								<option value="2">Пункт №2</option>
+								<option value="3">Пункт №3</option>
+								<option value="4">Пункт №4</option>
 								<option value="2">Пункт №2</option>
 								<option value="3">Пункт №3</option>
 								<option value="4">Пункт №4</option>
@@ -118,7 +121,20 @@
 				</div>
 				<div class="portfolio-in__filters filters-portfolio-in">
 					<div class="filters-portfolio-in__container container">
-						<button class="filters-portfolio-in__btn">Фильтры</button>
+						<div class="filters-portfolio-in__head">
+							<button type="button" class="filters-portfolio-in__head-btn">
+								Фильтры
+							</button>
+							<button type="button" class="filters-portfolio-in__reset-btn">
+								Сбросить
+							</button>
+						</div>
+						<button class="filters-portfolio-in__btn btn btn_primary_ghost btn_primary_ghost_white">
+							<span class="btn__txt">Применить</span>
+							<svg class="btn__svg">
+								<use href="#arr-svg"></use>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -208,7 +224,97 @@
 				<div class="reviews-modal__image-wrap modal-body">
 					<img src="img/content/35.webp" class="reviews-modal__image" alt="" />
 				</div>
-				<button class="reviews-modal__close-btn close-modal-btn">
+				<button class="modal__close-btn close-modal-btn">
+					<svg>
+						<use href="#cross-svg"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div id="project-modal" class="project-modal modal">
+			<div class="project-modal__container container modal-content">
+				<div class="project-modal__body modal-body">
+					<div class="project-modal__slider swiper">
+						<div class="project-modal__wrapper swiper-wrapper">
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project-modal__thumbs-slider swiper">
+						<div class="project-modal__wrapper swiper-wrapper">
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="project-modal__nav-btn nav-btn nav-btn_prev">
+						<svg>
+							<use href="#arrow-svg"></use>
+						</svg>
+					</button>
+					<button class="project-modal__nav-btn nav-btn nav-btn_next">
+						<svg>
+							<use href="#arrow-svg"></use>
+						</svg>
+					</button>
+				</div>
+				<button class="modal__close-btn close-modal-btn">
 					<svg>
 						<use href="#cross-svg"></use>
 					</svg>

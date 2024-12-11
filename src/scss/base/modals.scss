@@ -32,7 +32,7 @@ body::after {
 
 // --------------------------------------------------------------------------
 
-.reviews-modal {
+.modal {
   position: fixed;
   z-index: 150;
   top: 0;
@@ -43,9 +43,7 @@ body::after {
   visibility: hidden;
   transition: visibility 0.3s ease, opacity 0.3s ease;
 
-  // .reviews-modal__container
-
-  &__container {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,8 +52,6 @@ body::after {
     width: 100%;
     min-height: 100%;
   }
-
-  // .reviews-modal__close-btn
 
   &__close-btn {
     position: absolute;
@@ -81,7 +77,9 @@ body::after {
       color: $white;
     }
   }
+}
 
+.reviews-modal {
   // .reviews-modal__image-wrap
 
   &__image-wrap {
@@ -99,5 +97,99 @@ body::after {
   &__image {
     width: auto;
     height: 100%;
+  }
+}
+
+.project-modal {
+  // .project-modal__container
+
+  &__container {
+  }
+
+  // .project-modal__body
+
+  &__body {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+    width: 127.9rem;
+  }
+
+  // .project-modal__slider
+
+  &__slider {
+    &.swiper {
+      width: 100%;
+      height: 72rem;
+    }
+  }
+
+  // .project-modal__wrapper
+
+  &__wrapper {
+  }
+
+  // .project-modal__slide
+
+  &__slide {
+  }
+
+  // .project-modal__image-wrap
+
+  &__image-wrap {
+    width: 100%;
+    height: 72rem;
+  }
+
+  // .project-modal__image
+
+  &__image {
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  // .project-modal__thumbs-slider
+
+  &__thumbs-slider {
+    &.swiper {
+      width: 100%;
+    }
+    .swiper-slide {
+      width: 16rem;
+    }
+    .project-modal__image-wrap {
+      height: 16rem;
+    }
+  }
+
+  // .project-modal__nav-btn
+
+  &__nav-btn {
+    position: absolute;
+    top: 33.2rem;
+
+    &.nav-btn {
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    svg {
+      color: $white;
+    }
+
+    &.nav-btn_prev {
+      left: -20.5rem;
+
+      transform: rotate(180deg) translateX(100%);
+    }
+
+    &.nav-btn_next {
+      right: -20.5rem;
+
+      transform: translateX(100%);
+    }
   }
 }
