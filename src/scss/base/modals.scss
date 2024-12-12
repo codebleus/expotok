@@ -104,6 +104,7 @@ body::after {
   // .project-modal__container
 
   &__container {
+    position: relative;
   }
 
   // .project-modal__body
@@ -114,8 +115,17 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 5rem;
     width: 127.9rem;
+    row-gap: 5rem;
+
+    @media (max-width: 48em) {
+      position: static;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   // .project-modal__slider
@@ -124,6 +134,16 @@ body::after {
     &.swiper {
       width: 100%;
       height: 72rem;
+
+      @media (max-width: 48em) {
+        grid-column: 1/3;
+
+        &:not(&.project-modal__thumbs-slider) {
+          margin-bottom: auto;
+        }
+
+        height: 38.8rem;
+      }
     }
   }
 
@@ -141,7 +161,7 @@ body::after {
 
   &__image-wrap {
     width: 100%;
-    height: 72rem;
+    height: 100%;
   }
 
   // .project-modal__image
@@ -157,20 +177,40 @@ body::after {
   &__thumbs-slider {
     &.swiper {
       width: 100%;
+
+      @media (max-width: 48em) {
+        position: absolute;
+        bottom: 3.2rem;
+        left: 3.2rem;
+
+        width: 100vw;
+      }
     }
     .swiper-slide {
       width: 16rem;
+
+      cursor: pointer;
+
+      @media (max-width: 48em) {
+        width: 20rem;
+      }
     }
     .project-modal__image-wrap {
       height: 16rem;
+
+      @media (max-width: 48em) {
+        height: 20rem;
+      }
     }
   }
 
   // .project-modal__nav-btn
 
   &__nav-btn {
-    position: absolute;
-    top: 33.2rem;
+    @media (min-width: 48em) {
+      position: absolute;
+      top: 33.2rem;
+    }
 
     &.nav-btn {
       border: 2px solid rgba(255, 255, 255, 0.2);
@@ -181,15 +221,24 @@ body::after {
     }
 
     &.nav-btn_prev {
-      left: -20.5rem;
+      transform: rotate(180deg);
 
-      transform: rotate(180deg) translateX(100%);
+      @media (min-width: 48em) {
+        left: -20.5rem;
+
+        transform: rotate(180deg) translateX(100%);
+      }
     }
 
     &.nav-btn_next {
-      right: -20.5rem;
+      @media (max-width: 48em) {
+        justify-self: end;
+      }
+      @media (min-width: 48em) {
+        right: -20.5rem;
 
-      transform: translateX(100%);
+        transform: translateX(100%);
+      }
     }
   }
 }

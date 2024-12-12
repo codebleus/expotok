@@ -1,6 +1,12 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Autoplay, Pagination, Navigation, Controller } from 'swiper/modules';
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  Controller,
+  Thumbs,
+} from 'swiper/modules';
 import { remToPx } from '../utils/utils';
 
 if (document.querySelector('.clients__slider')) {
@@ -38,39 +44,43 @@ if (document.querySelector('.reviews__slider')) {
     },
   });
 }
-if (document.querySelector('.project-modal__slider')) {
-  const slider = new Swiper('.project-modal__slider', {
-    modules: [Navigation, Controller],
+if (
+  document.querySelector('.project-modal__slider, .portfolio-chapter__gallery')
+) {
+  const thumbs = new Swiper('.project-modal__thumbs-slider', {
+    modules: [Navigation],
     speed: 800,
-    // loop: true,
+    spaceBetween: remToPx(4),
+    slidesPerView: 'auto',
+    loop: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  const slider = new Swiper('.project-modal__slider', {
+    modules: [Navigation, Thumbs],
+    speed: 800,
+    loop: true,
     spaceBetween: 30,
     navigation: {
       prevEl: '.project-modal .nav-btn_prev',
       nextEl: '.project-modal .nav-btn_next',
     },
-  });
-  const thumbs = new Swiper('.project-modal__thumbs-slider', {
-    modules: [Navigation, Controller],
-    speed: 800,
-    spaceBetween: remToPx(4),
-    slidesPerView: 5,
-    // loop: true,
-    centeredSlidesBounds: true,
-    centeredSlides: true,
-    navigation: {
-      prevEl: '.project-modal .nav-btn_prev',
-      nextEl: '.project-modal .nav-btn_next',
-    },
-    slideToClickedSlide: true,
-    on: {
-      init: swiper => {
-        document.addEventListener('click', function (e) {
-          // if (e.target.closest('.project-modal__thumbs-slider .swiper-slide'))
-        });
-      },
+    thumbs: {
+      swiper: thumbs,
     },
   });
 
-  slider.controller.control = thumbs;
-  thumbs.controller.control = slider;
+  document
+    .querySelector('.portfolio-chapter__gallery')
+    .addEventListener('click', function (e) {
+      if (e.target.closest('.portfolio-chapter__image-wrap')) {
+        slider.slideTo(
+          e.target.closest('.portfolio-chapter__image-wrap').dataset.idx
+        );
+      }
+    });
 }
