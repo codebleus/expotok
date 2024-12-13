@@ -285,6 +285,72 @@
   }
 }
 
+.reviews-in {
+  position: relative;
+
+  padding-top: 20rem;
+
+  background-color: $gray;
+
+  color: $white;
+
+  &__rect {
+    right: -64rem;
+    top: 15rem;
+
+    @media (max-width: 48em) {
+      right: -55rem;
+      top: -4rem;
+    }
+  }
+
+  @media (max-width: 48em) {
+    padding-top: 22rem;
+  }
+
+  // .reviews-in__container
+
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 7rem;
+
+    @media (max-width: 48em) {
+      row-gap: 6.4rem;
+    }
+  }
+
+  // .reviews-in__title
+
+  &__title {
+  }
+
+  // .reviews-in__items
+
+  &__items {
+    display: grid;
+    gap: 6.4rem;
+
+    .slide-reviews {
+      border: 2px solid rgba(255, 255, 255, 0.2);
+
+      background: #3d3d3d;
+
+      &__txt {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    @media (min-width: 48em) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+}
+
 .nav-btn {
   display: inline-flex;
   align-items: center;
