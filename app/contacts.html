@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Контакты</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<a href="/" class="header__logo-wrap"><img src="img/logo-w.svg" class="header__logo" alt="" /></a>
+				<nav data-da=".menu-header__container,768,last" class="header__nav">
+					<a href="#" class="header__link txt20">Услуги</a>
+					<a href="#" class="header__link txt20">Аренда</a>
+					<a href="#" class="header__link txt20">Портфолио</a>
+					<a href="#" class="header__link txt20">О компании</a>
+					<a href="#" class="header__link txt20">Отзывы</a>
+					<a href="#" class="header__link txt20">Контакты</a>
+				</nav>
+				<a data-da=".menu-header__container,768,last" href="tel:74997071985" class="header__btn btn btn_secondary">
+					<svg class="btn__svg">
+						<use href="#tel-svg"></use>
+					</svg>
+					<span class="btn__txt txt20">+7(499)-707-19-85</span>
+				</a>
+				<button class="header__hamburger">
+					<svg>
+						<use href="#hamburger-svg"></use>
+					</svg>
+					<svg>
+						<use href="#cross-svg"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="header__menu menu-header">
+				<div class="menu-header__container container"></div>
+			</div>
+			<a href="tel:74997071985" class="header__call"><svg>
+					<use href="#tel-svg"></use>
+				</svg></a>
+		</header>
+
+		<main class="main">
+			<section class="contacts">
+				<div class="contacts__container container">
+					<div class="contacts__content">
+						<h1 class="contacts__title title">Контакты</h1>
+						<ul class="contacts__list">
+							<li class="contacts__item item-contacts">
+								<span class="item-contacts__subtitle"><svg>
+										<use href="#tel-svg"></use>
+									</svg><span class="item-contacts__subtitle-txt txt20">Телефон</span></span>
+								<a href="tel:+74997071985" class="item-contacts__txt txt20">+7(499)-707-19-85</a>
+							</li>
+							<li class="contacts__item item-contacts">
+								<span class="item-contacts__subtitle"><svg>
+										<use href="#mail-svg"></use>
+									</svg><span class="item-contacts__subtitle-txt txt20">Почта</span></span>
+								<a href="mailto:info@expotok.ru" class="item-contacts__txt txt20">info@expotok.ru</a>
+							</li>
+							<li class="contacts__item item-contacts">
+								<span class="item-contacts__subtitle"><svg>
+										<use href="#pin-svg"></use>
+									</svg><span class="item-contacts__subtitle-txt txt20">Адрес</span></span>
+								<span class="item-contacts__txt txt20">МО,г. Мытищи, Олимпийский пр-т д.2, стр 2</span>
+							</li>
+						</ul>
+						<div class="contacts__socials">
+							<span class="contacts__subtitle txt20">Социальные сети:</span>
+							<ul class="contacts__socials-list socials-contacts">
+								<li class="socials-contacts__item">
+									<a href="#" target="_blank" class="socials-contacts__inner"><svg>
+											<use href="#vk-svg"></use>
+										</svg></a>
+								</li>
+								<li class="socials-contacts__item">
+									<a href="#" target="_blank" class="socials-contacts__inner"><svg>
+											<use href="#tg-svg"></use>
+										</svg></a>
+								</li>
+								<li class="socials-contacts__item">
+									<a href="#" target="_blank" class="socials-contacts__inner"><svg>
+											<use href="#ig-svg"></use>
+										</svg></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div data-coordinates="37.77715799999997,55.91258656881297" data-center="37.77715799999997,55.91258656881297" id="ymap" class="contacts__map"></div>
+				</div>
+			</section>
+			<section class="request">
+				<div class="request__container container">
+					<h2 class="request__title title">Оставляйте заявку</h2>
+					<p class="request__txt txt20">
+						Оптимальное соотношение цены и качества — вот то к чему мы пришли за
+						многие годы упорного труда.
+					</p>
+					<form action="#" class="request__form">
+						<div class="request__fields">
+							<div class="request__field field">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Имя" class="field__input" />
+							</div>
+							<div class="request__field field">
+								<input autocomplete="off" type="tel" name="form[]" placeholder="+ 7(___) ___ - __- __" class="field__input _num-only" />
+							</div>
+							<div class="request__field field">
+								<textarea name="form[]" placeholder="Комментарий" class="field__input"></textarea>
+							</div>
+						</div>
+						<div class="request__checkbox checkbox">
+							<input type="checkbox" name="form[]" class="checkbox__input" />
+							<span class="checkbox__txt txt20">Я согласен на обработку персональных данных</span>
+						</div>
+						<p class="request__text">
+							Нажимая на кнопку “Отправить” Вы соглашаетесь на обработку персональных
+							данных
+						</p>
+						<button class="request__btn btn btn_primary btn_primary_ghost btn_primary_ghost_white">
+							<span class="btn__txt">Отправить</span>
+						</button>
+					</form>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div data-accordion class="footer__container container">
+				<div class="footer__info">
+					<a href="#" class="footer__logo-wrap">
+						<img src="img/logo-w.svg" alt="" class="footer__logo" />
+					</a>
+					<p class="footer__txt txt20">Создаём выставочные стенды</p>
+				</div>
+				<div data-accordion-item class="footer__group footer__group_accordion">
+					<button class="footer__link txt20">Услуги</button>
+					<div data-accordion-body class="footer__list-wrap">
+						<ul data-accordion-inner class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Выставочные стенды</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Торговые зоны</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Музейные экспозиции</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Аренда мебели</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Промоутеры и кейтеринг</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link txt20">Полиграфия</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__group">
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link txt20">Портфолио</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link txt20">Отзывы</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link txt20">О компании</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link txt20">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__contacts contacts-footer">
+					<ul class="contacts-footer__list">
+						<li class="contacts-footer__item">
+							<a href="tel:74997071985" class="contacts-footer__item-content">
+								<svg>
+									<use href="#tel-svg"></use>
+								</svg>
+								<span class="contacts-footer__item-txt txt20">+7(499)-707-19-85</span>
+							</a>
+						</li>
+						<li class="contacts-footer__item">
+							<a href="mailto:info@expotok.ru" class="contacts-footer__item-content">
+								<svg>
+									<use href="#mail-svg"></use>
+								</svg>
+								<span class="contacts-footer__item-txt txt20">info@expotok.ru</span>
+							</a>
+						</li>
+						<li class="contacts-footer__item">
+							<span class="contacts-footer__item-content">
+								<svg>
+									<use href="#pin-svg"></use>
+								</svg>
+								<span class="contacts-footer__item-txt txt20">МО,г. Мытищи, Олимпийский пр-т д.2, стр 2</span>
+							</span>
+						</li>
+					</ul>
+					<a href="#" target="_blank" class="contacts-footer__link contacts-footer__link_base txt16">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+		<div id="reviews-modal" class="reviews-modal modal">
+			<div class="reviews-modal__container container modal-content">
+				<div class="reviews-modal__image-wrap modal-body">
+					<img src="img/content/35.webp" class="reviews-modal__image" alt="" />
+				</div>
+				<button class="modal__close-btn close-modal-btn">
+					<svg>
+						<use href="#cross-svg"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div id="project-modal" class="project-modal modal">
+			<div class="project-modal__container container modal-content">
+				<div class="project-modal__body modal-body">
+					<div class="project-modal__slider swiper">
+						<div class="project-modal__wrapper swiper-wrapper">
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project-modal__thumbs-slider swiper">
+						<div class="project-modal__wrapper swiper-wrapper">
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/02.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+							<div class="project-modal__slide swiper-slide">
+								<div class="project-modal__image-wrap">
+									<img src="img/content/7.webp" class="project-modal__image" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="project-modal__nav-btn nav-btn nav-btn_prev">
+						<svg>
+							<use href="#arrow-svg"></use>
+						</svg>
+					</button>
+					<button class="project-modal__nav-btn nav-btn nav-btn_next">
+						<svg>
+							<use href="#arrow-svg"></use>
+						</svg>
+					</button>
+				</div>
+				<button class="modal__close-btn close-modal-btn">
+					<svg>
+						<use href="#cross-svg"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+	</div>
+	<svg display="none">
+		<symbol id="vk-svg" viewBox="0 0 42 42">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M2.95236 2.95236C0 5.90473 0 10.6565 0 20.16V21.84C0 31.3435 0 36.0953 2.95236 39.0476C5.90473 42 10.6565 42 20.16 42H21.84C31.3435 42 36.0953 42 39.0476 39.0476C42 36.0953 42 31.3435 42 21.84V20.16C42 10.6565 42 5.90473 39.0476 2.95236C36.0953 0 31.3435 0 21.84 0H20.16C10.6565 0 5.90473 0 2.95236 2.95236ZM7.08756 12.7751C7.31506 23.6951 12.775 30.2576 22.3475 30.2576H22.8901V24.0101C26.4076 24.3601 29.0674 26.9326 30.1349 30.2576H35.1051C33.7401 25.2876 30.1524 22.5401 27.9124 21.4901C30.1524 20.1951 33.3024 17.0451 34.0549 12.7751H29.5398C28.5598 16.2401 25.6551 19.3901 22.8901 19.6876V12.7751H18.375V24.8851C15.575 24.1851 12.04 20.7901 11.8825 12.7751H7.08756Z" fill="currentColor" />
+		</symbol>
+		<symbol id="ig-svg" viewBox="0 0 42 42">
+			<g clip-path="url(#clip0_2130_6337)">
+				<path d="M12.18 0H29.82C36.54 0 42 5.46 42 12.18V29.82C42 33.0503 40.7168 36.1484 38.4326 38.4326C36.1484 40.7168 33.0503 42 29.82 42H12.18C5.46 42 0 36.54 0 29.82V12.18C0 8.94966 1.28325 5.85163 3.56744 3.56744C5.85163 1.28325 8.94966 0 12.18 0ZM11.76 4.2C9.75496 4.2 7.83205 4.9965 6.41427 6.41427C4.9965 7.83205 4.2 9.75496 4.2 11.76V30.24C4.2 34.419 7.581 37.8 11.76 37.8H30.24C32.245 37.8 34.168 37.0035 35.5857 35.5857C37.0035 34.168 37.8 32.245 37.8 30.24V11.76C37.8 7.581 34.419 4.2 30.24 4.2H11.76ZM32.025 7.35C32.7212 7.35 33.3889 7.62656 33.8812 8.11884C34.3734 8.61113 34.65 9.27881 34.65 9.975C34.65 10.6712 34.3734 11.3389 33.8812 11.8312C33.3889 12.3234 32.7212 12.6 32.025 12.6C31.3288 12.6 30.6611 12.3234 30.1688 11.8312C29.6766 11.3389 29.4 10.6712 29.4 9.975C29.4 9.27881 29.6766 8.61113 30.1688 8.11884C30.6611 7.62656 31.3288 7.35 32.025 7.35ZM21 10.5C23.7848 10.5 26.4555 11.6062 28.4246 13.5754C30.3938 15.5445 31.5 18.2152 31.5 21C31.5 23.7848 30.3938 26.4555 28.4246 28.4246C26.4555 30.3938 23.7848 31.5 21 31.5C18.2152 31.5 15.5445 30.3938 13.5754 28.4246C11.6062 26.4555 10.5 23.7848 10.5 21C10.5 18.2152 11.6062 15.5445 13.5754 13.5754C15.5445 11.6062 18.2152 10.5 21 10.5ZM21 14.7C19.3291 14.7 17.7267 15.3637 16.5452 16.5452C15.3637 17.7267 14.7 19.3291 14.7 21C14.7 22.6709 15.3637 24.2733 16.5452 25.4548C17.7267 26.6363 19.3291 27.3 21 27.3C22.6709 27.3 24.2733 26.6363 25.4548 25.4548C26.6363 24.2733 27.3 22.6709 27.3 21C27.3 19.3291 26.6363 17.7267 25.4548 16.5452C24.2733 15.3637 22.6709 14.7 21 14.7Z" fill="white" />
+			</g>
+			<defs>
+				<clipPath id="clip0_2130_6337">
+					<rect width="42" height="42" fill="currentColor" />
+				</clipPath>
+			</defs>
+		</symbol>
+		<symbol id="tg-svg" viewBox="0 0 42 42">
+			<g clip-path="url(#clip0_2130_6334)">
+				<path d="M42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42C32.598 42 42 32.598 42 21Z" fill="currentColor" />
+				<path d="M31.9757 14.3226C32.074 13.6336 32.0249 13.1906 31.7296 12.8953C31.4344 12.6 31.0404 12.5508 30.5484 12.6984L11.0085 20.2289C10.3194 20.5242 9.97488 20.8195 9.97488 21.1149C9.92565 21.4595 10.1718 21.7054 10.7624 21.853L15.7827 23.428L27.3984 16.0945C27.546 15.9961 27.6936 15.9469 27.8413 15.9469C27.9889 15.9469 28.0874 15.9469 28.1365 16.0453C28.1859 16.1437 28.1365 16.193 28.0382 16.2914L18.6374 24.8062L18.2436 29.9741C18.4897 29.9741 18.6866 29.925 18.8835 29.8265C18.9819 29.7774 19.0804 29.6789 19.2772 29.4821L21.7382 27.1196L26.8076 30.8601C27.2507 31.1554 27.6445 31.2047 27.9397 31.0571C28.235 30.9095 28.4811 30.5649 28.6288 29.9741L31.9757 14.3226Z" fill="#3D3D3D" />
+			</g>
+			<defs>
+				<clipPath id="clip0_2130_6334">
+					<rect width="42" height="42" fill="currentColor" />
+				</clipPath>
+			</defs>
+		</symbol>
+		<symbol id="tel-svg" viewBox="0 0 24 24">
+			<path d="M21.97 18.83C21.97 19.19 21.89 19.56 21.72 19.92C21.55 20.28 21.33 20.62 21.04 20.94C20.55 21.48 20.01 21.87 19.4 22.12C18.8 22.37 18.15 22.5 17.45 22.5C16.43 22.5 15.34 22.26 14.19 21.77C13.04 21.28 11.89 20.62 10.75 19.79C9.6 18.95 8.51 18.02 7.47 16.99C6.44 15.95 5.51 14.86 4.68 13.72C3.86 12.58 3.2 11.44 2.72 10.31C2.24 9.17 2 8.08 2 7.04C2 6.36 2.12 5.71 2.36 5.11C2.6 4.5 2.98 3.94 3.51 3.44C4.15 2.81 4.85 2.5 5.59 2.5C5.87 2.5 6.15 2.56 6.4 2.68C6.66 2.8 6.89 2.98 7.07 3.24L9.39 6.51C9.57 6.76 9.7 6.99 9.79 7.21C9.88 7.42 9.93 7.63 9.93 7.82C9.93 8.06 9.86 8.3 9.72 8.53C9.59 8.76 9.4 9 9.16 9.24L8.4 10.03C8.29 10.14 8.24 10.27 8.24 10.43C8.24 10.51 8.25 10.58 8.27 10.66C8.3 10.74 8.33 10.8 8.35 10.86C8.53 11.19 8.84 11.62 9.28 12.14C9.73 12.66 10.21 13.19 10.73 13.72C11.27 14.25 11.79 14.74 12.32 15.19C12.84 15.63 13.27 15.93 13.61 16.11C13.66 16.13 13.72 16.16 13.79 16.19C13.87 16.22 13.95 16.23 14.04 16.23C14.21 16.23 14.34 16.17 14.45 16.06L15.21 15.31C15.46 15.06 15.7 14.87 15.93 14.75C16.16 14.61 16.39 14.54 16.64 14.54C16.83 14.54 17.03 14.58 17.25 14.67C17.47 14.76 17.7 14.89 17.95 15.06L21.26 17.41C21.52 17.59 21.7 17.8 21.81 18.05C21.91 18.3 21.97 18.55 21.97 18.83Z" fill="currentColor" />
+		</symbol>
+		<symbol id="hamburger-svg" viewBox="0 0 28 17">
+			<rect y="7" width="28" height="3" fill="white" />
+			<rect x="8" width="20" height="3" fill="white" />
+			<rect y="14" width="20" height="3" fill="white" />
+			<rect width="5" height="3" fill="white" />
+			<rect x="23" y="14" width="5" height="3" fill="white" />
+		</symbol>
+		<symbol id="cross-svg" viewBox="0 0 24 24">
+			<path d="M4 4L12 12M12 12L20 4M12 12L4 20M12 12L20 20" stroke="white" stroke-width="2" />
+		</symbol>
+
+		<symbol id="arr-svg" viewBox="0 0 28 14">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M20.6693 0.290771L27.4184 6.99997L20.6693 13.7092L19.2593 12.2908L23.5756 7.99997H0V5.99997H23.5756L19.2593 1.70918L20.6693 0.290771Z" fill="currentColor" />
+		</symbol>
+		<symbol id="arrow-svg" viewBox="0 0 24 24">
+			<path d="M0.5 7H26.5M26.5 7L20.4643 1M26.5 7L20.4643 13" stroke="currentColor" stroke-width="2" />
+		</symbol>
+		<symbol id="mail-svg" viewBox="0 0 24 24">
+			<path d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z" fill="currentColor" />
+		</symbol>
+		<symbol id="pin-svg" viewBox="0 0 24 24">
+			<g clip-path="url(#clip0_4028_286)">
+				<path d="M20.6191 8.45C19.5691 3.83 15.5391 1.75 11.9991 1.75C11.9991 1.75 11.9991 1.75 11.9891 1.75C8.45912 1.75 4.41912 3.82 3.36912 8.44C2.19912 13.6 5.35912 17.97 8.21912 20.72C9.27912 21.74 10.6391 22.25 11.9991 22.25C13.3591 22.25 14.7191 21.74 15.7691 20.72C18.6291 17.97 21.7891 13.61 20.6191 8.45ZM11.9991 13.46C10.2591 13.46 8.84912 12.05 8.84912 10.31C8.84912 8.57 10.2591 7.16 11.9991 7.16C13.7391 7.16 15.1491 8.57 15.1491 10.31C15.1491 12.05 13.7391 13.46 11.9991 13.46Z" fill="currentColor" />
+			</g>
+			<defs>
+				<clipPath id="clip0_4028_286">
+					<rect width="24" height="24" fill="currentColor" />
+				</clipPath>
+			</defs>
+		</symbol>
+	</svg>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

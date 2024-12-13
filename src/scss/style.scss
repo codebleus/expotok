@@ -63,6 +63,10 @@ $gray: #3d3d3d;
   }
 }
 
+ymaps canvas {
+  filter: grayscale(1);
+}
+
 main {
   flex: 1 1 auto;
 }
@@ -91,3 +95,7 @@ main {
 @import 'sections/photozones';
 @import 'sections/entertaiment';
 @import 'sections/portfolio-chapter';
+@import 'sections/image-text';
+@import 'sections/resources';
+@import 'sections/advantages';
+@import 'sections/contacts';
