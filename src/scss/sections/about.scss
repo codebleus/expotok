@@ -5,32 +5,61 @@
 
   overflow: hidden;
 
-  &::after {
-    content: '';
+  // &::after {
+  //   content: '';
 
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   right: 0;
 
-    width: 43.2rem;
-    height: 43.2rem;
-    border: 1px solid #cfcfcf;
+  //   width: 43.2rem;
+  //   height: 43.2rem;
+  //   border: 1px solid #cfcfcf;
 
-    transform: translate(48rem, 14rem) rotate(45deg);
+  //   transform: translate(48rem, 14rem) rotate(45deg);
 
-    @media (min-width: 48em) {
-      animation: rect1 10s ease 5s infinite;
+  //   @media (min-width: 48em) {
+  //     animation: rect1 10s ease 5s infinite;
+  //   }
+
+  //   @media (max-width: 48em) {
+  //     top: auto;
+  //     bottom: 0;
+
+  //     width: 44.8rem;
+  //     height: 44.8rem;
+
+  //     transform: translate(38rem, -45rem) rotate(45deg);
+  //   }
+  // }
+
+  &__rect {
+    top: 119rem;
+    right: -37rem;
+
+    animation: rect1s 10s ease 5s infinite;
+
+    &::before {
+      animation: rect2s 10s ease 5s infinite;
     }
 
-    @media (max-width: 48em) {
-      top: auto;
-      bottom: 0;
+    &::after {
+      animation: rect3s 10s ease 5s infinite;
+    }
 
-      width: 44.8rem;
-      height: 44.8rem;
+    @media (min-width: 48em) {
+      top: 5rem;
+      right: -46rem;
 
-      transform: translate(38rem, -45rem) rotate(45deg);
+      animation: rect1 10s ease 5s infinite;
+
+      &::before {
+        animation: rect2 10s ease 5s infinite;
+      }
+      &::after {
+        animation: rect3 10s ease 5s infinite;
+      }
     }
   }
 
@@ -45,60 +74,6 @@
     @media (max-width: 48em) {
       flex-direction: column;
       row-gap: 4.8rem;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-
-      width: 90rem;
-      height: 90rem;
-      border: 1px solid #cfcfcf;
-
-      @media (max-width: 48em) {
-        top: auto;
-        bottom: 0;
-
-        width: 93.2rem;
-        height: 93.2rem;
-      }
-    }
-
-    &::before {
-      @media (min-width: 48em) {
-        animation: rect2 10s ease 5s infinite;
-      }
-    }
-
-    &::after {
-      transform: translate(101rem, -29rem) rotate(45deg);
-
-      @media (min-width: 48em) {
-        animation: rect3 10s ease 5s infinite;
-      }
-
-      @media (max-width: 48em) {
-        transform: translate(73rem, -1rem) rotate(45deg);
-      }
-    }
-
-    &::before {
-      width: 67.4rem;
-      height: 67.4rem;
-
-      transform: translate(85rem, -18rem) rotate(45deg);
-
-      @media (max-width: 48em) {
-        width: 69.8rem;
-        height: 69.8rem;
-
-        transform: translate(56rem, -13rem) rotate(45deg);
-      }
     }
   }
 
@@ -148,7 +123,7 @@
     line-height: 144%;
 
     @media (max-width: 48em) {
-      row-gap: 4rem;
+      row-gap: 2rem;
     }
   }
 
@@ -334,45 +309,132 @@
   }
 }
 
-@keyframes rect1 {
+.rect2 {
+  position: absolute;
+
+  width: 63.6rem;
+  height: 63.6rem;
+  border: 2px solid #cfcfcf;
+
+  transform: rotate(45deg);
+
+  @media (max-width: 48em) {
+    border: 1px solid #cfcfcf;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    border: 2px solid #cfcfcf;
+
+    transform: rotate(180deg);
+
+    @media (max-width: 48em) {
+      border: 1px solid #cfcfcf;
+    }
+  }
+
+  &::before {
+    top: 8.5rem;
+    left: 7.5rem;
+
+    width: 47.4rem;
+    height: 47.4rem;
+  }
+
+  &::after {
+    top: 18.5rem;
+    left: 14.5rem;
+
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@keyframes rect1s {
   0% {
-    top: 0;
-    right: 0;
+    top: 119rem;
+    right: -37rem;
   }
   30% {
-    top: 11rem;
-    right: 18rem;
+    top: 109rem;
+    right: -34rem;
   }
   100% {
-    top: 0;
-    right: 0;
+    top: 119rem;
+    right: -37rem;
+  }
+}
+@keyframes rect2s {
+  0% {
+    top: 8.5rem;
+    left: 7.5rem;
+  }
+  30% {
+    top: 1.5rem;
+    left: 14.5rem;
+  }
+  100% {
+    top: 8.5rem;
+    left: 7.5rem;
+  }
+}
+@keyframes rect3s {
+  0% {
+    top: 18.5rem;
+    left: 14.5rem;
+  }
+  30% {
+    top: 25.5rem;
+    left: 29.5rem;
+  }
+  100% {
+    top: 18.5rem;
+    left: 14.5rem;
+  }
+}
+@keyframes rect1 {
+  0% {
+    top: 5rem;
+    right: -46rem;
+  }
+  30% {
+    top: -1rem;
+    right: -42rem;
+  }
+  100% {
+    top: 5rem;
+    right: -46rem;
   }
 }
 @keyframes rect2 {
   0% {
-    top: 0;
-    right: 0;
+    top: 8.5rem;
+    left: 7.5rem;
   }
   30% {
-    top: 0;
-    right: -11rem;
+    top: -3.5rem;
+    left: 17.5rem;
   }
   100% {
-    top: 0;
-    right: 0;
+    top: 8.5rem;
+    left: 7.5rem;
   }
 }
 @keyframes rect3 {
   0% {
-    top: 0;
-    right: 0;
+    top: 18.5rem;
+    left: 14.5rem;
   }
   30% {
-    right: 2rem;
-    top: -6rem;
+    top: 30rem;
+    left: 25rem;
   }
   100% {
-    top: 0;
-    right: 0;
+    top: 18.5rem;
+    left: 14.5rem;
   }
 }

@@ -1,9 +1,27 @@
 .contacts {
+  position: relative;
+
   padding-top: 20rem;
 
   background-color: $gray;
 
   color: $white;
+
+  &__rect {
+    top: 63.1rem;
+    right: -72rem;
+
+    animation: crect1 10s ease 5s infinite;
+
+    @media (max-width: 48em) {
+      top: 94.1rem;
+      right: -53rem;
+    }
+
+    &::before {
+      animation: crect2 10s ease 5s infinite;
+    }
+  }
 
   @media (max-width: 48em) {
     padding-top: 22rem;
@@ -12,6 +30,9 @@
   // .contacts__container
 
   &__container {
+    position: relative;
+    z-index: 2;
+
     display: grid;
 
     @media (min-width: 48em) {
@@ -178,5 +199,29 @@
         height: 8.4rem;
       }
     }
+  }
+}
+
+@keyframes crect1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-3rem, -13rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes crect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-4rem, 17rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

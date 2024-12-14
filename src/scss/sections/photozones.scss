@@ -58,13 +58,14 @@
 
     display: grid;
     align-items: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     @media (min-width: 48em) {
       padding: 2.4rem;
 
       grid-template-columns: 25rem 1fr;
       column-gap: 4rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
   }
 

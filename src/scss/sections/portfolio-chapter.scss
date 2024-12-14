@@ -5,24 +5,23 @@
 
   background-color: $gray;
 
-  &::before {
-    content: '';
-
-    position: absolute;
+  &__rect {
     top: 11.6rem;
     left: -54rem;
 
-    width: 90rem;
-    height: 90rem;
+    animation: pcrect1 10s ease 5s infinite;
 
-    background: url(@img/bg/1.svg) center / contain no-repeat;
+    &::before {
+      animation: pcrect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: pcrect3 10s ease 5s infinite;
+    }
 
     @media (max-width: 48em) {
       top: 2.6rem;
       left: -67rem;
-
-      width: 93.2rem;
-      height: 93.2rem;
     }
   }
 
@@ -214,6 +213,20 @@
 
   overflow: hidden;
 
+  transition: border 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid $red;
+
+      .btn {
+        background-color: $red;
+
+        color: $white;
+      }
+    }
+  }
+
   @media (max-width: 48em) {
     padding: 3.2rem;
 
@@ -347,5 +360,39 @@
 
     font-size: 3.2rem;
     line-height: 140%;
+  }
+}
+
+@keyframes pcrect1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-10rem, -3rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes pcrect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(23rem, 7rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes pcrect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(11rem, -1rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

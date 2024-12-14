@@ -47,6 +47,16 @@
     top: -14rem;
     left: -48rem;
 
+    animation: arect1 10s ease 5s infinite;
+
+    &::before {
+      animation: arect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: arect3 10s ease 5s infinite;
+    }
+
     @media (max-width: 48em) {
       display: none;
     }
@@ -166,5 +176,40 @@
     height: 100%;
 
     object-fit: cover;
+  }
+}
+
+@keyframes arect1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-9rem, -6rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes arect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(22rem, 9rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes arect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(16rem, -3rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

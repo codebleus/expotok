@@ -83,12 +83,58 @@
   // .header__link
 
   &__link {
+    position: relative;
+
     color: $white;
+
+    transition: color 0.3s ease;
+
+    @media (min-width: 48em) {
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: -1.6rem;
+
+        width: 0.6rem;
+        height: 0.6rem;
+
+        background-color: $red;
+
+        opacity: 0;
+        transform: rotate(45deg) translateY(-50%);
+
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $red;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   // .header__btn
 
   &__btn {
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          transform: rotate(20deg);
+        }
+      }
+    }
+
     @media (min-width: 48em) {
       margin-top: 1rem;
     }
@@ -97,6 +143,8 @@
   // .header__hamburger
 
   &__hamburger {
+    color: $white;
+
     @media (max-width: 48em) {
       transform: translateY(1rem);
     }
@@ -160,6 +208,22 @@
 
   transition: transform 0.5s ease;
 
+  &__rect {
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: menurect1 10s ease 5s infinite;
+
+    &::before {
+      animation: menurect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: menurect3 10s ease 5s infinite;
+    }
+  }
+
   &::before {
     content: '';
 
@@ -206,21 +270,6 @@
     flex-direction: column;
     align-items: center;
     row-gap: 6rem;
-
-    &::before {
-      content: '';
-
-      position: absolute;
-      top: 57%;
-      left: 50%;
-
-      width: 93.2rem;
-      height: 93.2rem;
-
-      background: url(@img/bg/1.svg) center / contain no-repeat;
-
-      transform: translate(-50%, -50%);
-    }
   }
 
   .header__link {
@@ -235,5 +284,39 @@
     flex-direction: column;
     align-items: center;
     row-gap: 36.8rem;
+  }
+}
+
+@keyframes menurect1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    transform: translate(-59%, -55%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes menurect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(19rem, 15rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes menurect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-1rem, -3rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

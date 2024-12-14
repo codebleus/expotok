@@ -16,11 +16,14 @@
     width: 50.5rem;
     height: 50.5rem;
 
-    border: 2px solid #dedede;
+    border: 1px solid #dedede;
 
     transform: rotate(45deg);
+    animation: rect16s 11s ease 5s infinite;
 
     @media (min-width: 48em) {
+      border: 2px solid #dedede;
+
       animation: rect16 11s ease 5s infinite;
     }
 
@@ -44,11 +47,14 @@
     width: 38rem;
     height: 38rem;
 
-    border: 2px solid #dedede;
+    border: 1px solid #dedede;
 
+    animation: rect17s 11s ease 5s infinite;
     transform: rotate(45deg);
 
     @media (min-width: 48em) {
+      border: 2px solid #dedede;
+
       animation: rect17 11s ease 5s infinite;
     }
 
@@ -82,11 +88,14 @@
       width: 24rem;
       height: 24rem;
 
-      border: 2px solid #dedede;
+      border: 1px solid #dedede;
 
       transform: rotate(45deg);
+      animation: rect18s 11s ease 5s infinite;
 
       @media (min-width: 48em) {
+        border: 2px solid #dedede;
+
         animation: rect18 11s ease 5s infinite;
       }
 
@@ -298,6 +307,16 @@
     right: -64rem;
     top: 15rem;
 
+    animation: rrect1 10s ease 5s infinite;
+
+    &::before {
+      animation: rrect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: rrect3 10s ease 5s infinite;
+    }
+
     @media (max-width: 48em) {
       right: -55rem;
       top: -4rem;
@@ -338,6 +357,14 @@
       border: 2px solid rgba(255, 255, 255, 0.2);
 
       background: #3d3d3d;
+
+      transition: border 0.3s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          border: 2px solid $red;
+        }
+      }
 
       &__txt {
         color: rgba(255, 255, 255, 0.4);
@@ -399,12 +426,35 @@
     transform: rotate(45deg);
   }
 }
+
+@keyframes rect16s {
+  0% {
+    transform: rotate(45deg);
+  }
+  30% {
+    transform: translate(-14rem, 0rem) rotate(45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
 @keyframes rect17 {
   0% {
     transform: rotate(45deg);
   }
   30% {
     transform: translate(8rem, -2rem) rotate(45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rect17s {
+  0% {
+    transform: rotate(45deg);
+  }
+  30% {
+    transform: translate(13rem, 1rem) rotate(45deg);
   }
   100% {
     transform: rotate(45deg);
@@ -419,5 +469,51 @@
   }
   100% {
     transform: rotate(45deg);
+  }
+}
+@keyframes rect18s {
+  0% {
+    transform: rotate(45deg);
+  }
+  30% {
+    transform: translate(-7rem, 13rem) rotate(45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rrect1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-5rem, 2rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rrect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(13rem, 6rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rrect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-9rem, -7rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

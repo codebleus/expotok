@@ -150,8 +150,41 @@
 
   &__link {
     &:not(.footer__list-wrap &) {
+      position: relative;
+
+      color: $white;
       line-height: 146%;
       font-weight: 500;
+
+      transition: color 0.3s ease;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: -1.6rem;
+
+        width: 0.6rem;
+        height: 0.6rem;
+
+        background-color: $red;
+
+        opacity: 0;
+        transform: rotate(45deg) translateY(-50%);
+
+        transition: opacity 0.3s ease;
+      }
+
+      @media (any-hover: hover) and (min-width: 48em) {
+        &:hover {
+          color: $red;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 

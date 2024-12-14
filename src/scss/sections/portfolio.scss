@@ -31,6 +31,8 @@
     left: -22rem;
     top: 25rem;
 
+    animation: rect4s 10s ease 5s infinite;
+
     @media (min-width: 48em) {
       animation: rect4 10s ease 5s infinite;
     }
@@ -88,6 +90,8 @@
       top: 16rem;
       left: -32rem;
 
+      animation: rect6s 10s ease 5s infinite;
+
       @media (min-width: 48em) {
         animation: rect6 10s ease 5s infinite;
       }
@@ -139,6 +143,8 @@
     &::before {
       top: 29rem;
       left: -21rem;
+
+      animation: rect5s 10s ease 5s infinite;
 
       @media (min-width: 48em) {
         animation: rect5 10s ease 5s infinite;
@@ -534,12 +540,34 @@
     transform: translate(0, 0);
   }
 }
+@keyframes rect4s {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(9rem, 3rem) skewY(-9deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 @keyframes rect5 {
   0% {
     transform: translate(0, 0);
   }
   30% {
-    transform: translate(-9rem, -7rem);
+    transform: translate(-13rem, -10rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rect5s {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-20rem, -9rem);
   }
   100% {
     transform: translate(0, 0);
@@ -551,6 +579,17 @@
   }
   30% {
     transform: translate(12rem, 9rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rect6s {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-17rem, -8rem);
   }
   100% {
     transform: translate(0, 0);

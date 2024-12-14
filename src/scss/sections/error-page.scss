@@ -82,5 +82,50 @@
     left: 50%;
 
     transform: translate(-50%, -50%);
+
+    animation: eprect1 10s ease 5s infinite;
+
+    &::before {
+      animation: eprect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: eprect3 10s ease 5s infinite;
+    }
+  }
+}
+
+@keyframes eprect1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    transform: translate(-58%, -52%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes eprect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(18rem, 5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes eprect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-5rem, -3rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

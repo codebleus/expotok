@@ -284,6 +284,40 @@
     padding: 4.8rem 0;
   }
 
+  @media (any-hover: hover) and (min-width: 48em) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      .item-services__text,
+      .item-services__subtitle {
+        color: $txtColor;
+      }
+      .btn {
+        background-color: $red;
+
+        color: $white;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 152rem) / -2);
+
+    width: 100vw;
+    height: 100%;
+
+    background-color: $bgColor;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+  }
+
   &::after {
     content: '';
 
@@ -302,6 +336,9 @@
   // .item-services__inner
 
   &__inner {
+    position: relative;
+    z-index: 2;
+
     display: grid;
 
     @media (min-width: 48em) {
@@ -341,6 +378,8 @@
   &__subtitle {
     color: $white;
 
+    transition: color 0.3s ease;
+
     @media (max-width: 48em) {
       margin-bottom: 3.2rem;
 
@@ -354,6 +393,8 @@
     margin-bottom: 4.8rem;
 
     color: rgba(255, 255, 255, 0.4);
+
+    transition: color 0.3s ease;
 
     &.txt20 {
       line-height: 137%;

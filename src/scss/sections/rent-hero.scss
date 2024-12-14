@@ -7,6 +7,21 @@
 
   color: $white;
 
+  &__rect {
+    top: 5.6rem;
+    left: 35.5rem;
+
+    animation: rentrect1 10s ease 5s infinite;
+
+    &::before {
+      animation: rentrect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: rentrect3 10s ease 5s infinite;
+    }
+  }
+
   @media (max-width: 48em) {
     padding: 22rem 0;
 
@@ -17,19 +32,6 @@
       width: 93.2rem;
       height: 93.2rem;
     }
-  }
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    top: 5.6rem;
-    left: 35.5rem;
-
-    width: 90rem;
-    height: 90rem;
-
-    background: url(@img/bg/1.svg) center / contain no-repeat;
   }
 
   // .rent-hero__container
@@ -114,5 +116,42 @@
     height: 100%;
 
     object-fit: cover;
+  }
+}
+
+@keyframes rentrect1 {
+  0% {
+    top: 5.6rem;
+    left: 35.5rem;
+  }
+  30% {
+    top: 4.6rem;
+    left: 27.5rem;
+  }
+  100% {
+    top: 5.6rem;
+    left: 35.5rem;
+  }
+}
+@keyframes rentrect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(13rem, 8rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rentrect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-2rem, -7rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

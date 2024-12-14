@@ -43,6 +43,7 @@
 			</div>
 			<div class="header__menu menu-header">
 				<div class="menu-header__container container"></div>
+				<span class="menu-header__rect rect"></span>
 			</div>
 			<a href="tel:74997071985" class="header__call"><svg>
 					<use href="#tel-svg"></use>
@@ -116,6 +117,7 @@
 						</button>
 					</a>
 				</div>
+				<span class="portfolio-chapter__rect rect"></span>
 			</section>
 		</main>
 		<footer class="footer">
@@ -301,6 +303,76 @@
 			</div>
 		</div>
 
+		<div id="request-modal" class="request-modal modal">
+			<div class="request-modal__container container modal-content">
+				<div class="request-modal__body modal-body">
+					<div class="request-modal__logo-wrap">
+						<img src="img/logo-red-b.svg" class="request-modal__logo" alt="" />
+					</div>
+					<form action="#" class="request-modal__form">
+						<span class="request-modal__title title">Оставьте заявку</span>
+						<p class="request-modal__text txt20">
+							Оптимальное соотношение цены и качества — вот то к чему мы пришли за
+							многие годы упорного труда.
+						</p>
+						<div class="request-modal__fields">
+							<div class="request-modal__field field">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Имя" class="field__input" />
+							</div>
+							<div class="request-modal__field field">
+								<input autocomplete="off" type="tel" name="form[]" placeholder="+ 7(___) ___ - __- __" class="field__input _num-only" />
+							</div>
+							<div class="request-modal__field field field_textarea">
+								<textarea name="form[]" placeholder="Комментарий" class="field__input"></textarea>
+							</div>
+						</div>
+						<p class="request-modal__description txt20">
+							Нажимая на кнопку “Отправить” Вы соглашаетесь на обработку
+							персональных данных
+						</p>
+						<a href="#" class="request-modal__btn btn btn_primary_ghost">
+							<span class="btn__txt">О компании </span>
+							<svg class="btn__svg">
+								<use href="#arr-svg"></use>
+							</svg>
+						</a>
+					</form>
+					<button class="modal__close-btn close-modal-btn">
+						<svg>
+							<use href="#cross-svg"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="request-sent-modal" class="request-modal request-modal_sent modal">
+			<div class="request-modal__container container modal-content">
+				<div class="request-modal__body modal-body">
+					<div class="request-modal__logo-wrap">
+						<img src="img/logo-w.svg" class="request-modal__logo" alt="" />
+					</div>
+					<div class="request-modal__content">
+						<span class="request-modal__title title">Заявка отправлена</span>
+						<p class="request-modal__text txt20">
+							Наши менеджеры свяжутся с Вами в ближайшее время!
+						</p>
+						<button class="request-modal__btn btn btn_primary_ghost">
+							<span class="btn__txt">Назад</span>
+							<svg class="btn__svg">
+								<use href="#arr-svg"></use>
+							</svg>
+						</button>
+					</div>
+					<button class="modal__close-btn close-modal-btn">
+						<svg>
+							<use href="#cross-svg"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<svg display="none">
 		<symbol id="vk-svg" viewBox="0 0 42 42">
@@ -338,7 +410,7 @@
 			<rect x="23" y="14" width="5" height="3" fill="white" />
 		</symbol>
 		<symbol id="cross-svg" viewBox="0 0 24 24">
-			<path d="M4 4L12 12M12 12L20 4M12 12L4 20M12 12L20 20" stroke="white" stroke-width="2" />
+			<path d="M4 4L12 12M12 12L20 4M12 12L4 20M12 12L20 20" stroke="currentColor" stroke-width="2" />
 		</symbol>
 
 		<symbol id="arr-svg" viewBox="0 0 28 14">

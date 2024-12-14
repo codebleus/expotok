@@ -11,6 +11,16 @@
     top: -19rem;
     right: -45rem;
 
+    animation: cprect1 10s ease 5s infinite;
+
+    &::before {
+      animation: cprect2 10s ease 5s infinite;
+    }
+
+    &::after {
+      animation: cprect3 10s ease 5s infinite;
+    }
+
     @media (max-width: 48em) {
       top: -26rem;
       right: -26rem;
@@ -64,7 +74,9 @@
 
     &:nth-child(2n) {
       .resources__image-wrap {
-        margin-bottom: 4.8rem;
+        @media (max-width: 48em) {
+          margin-bottom: 4.8rem;
+        }
 
         order: -1;
       }
@@ -99,6 +111,10 @@
   &__image-wrap {
     width: 100%;
     height: 41.6rem;
+
+    @media (min-width: 48em) {
+      flex: 1 1 auto;
+    }
 
     @media (max-width: 48em) {
       height: 38.4rem;
@@ -166,5 +182,40 @@
       width: 44.8rem;
       height: 44.8rem;
     }
+  }
+}
+
+@keyframes cprect1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(1rem, -1rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cprect2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(10rem, 6rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes cprect3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-12rem, -2rem);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
