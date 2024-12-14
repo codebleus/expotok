@@ -1,6 +1,8 @@
 import { removeClasses } from './utils';
 
 window.addEventListener('load', function () {
+  document.documentElement.classList.add('_page-loaded');
+
   if (document.querySelector('.header__hamburger')) {
     document
       .querySelector('.header__hamburger')
