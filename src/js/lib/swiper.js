@@ -12,10 +12,14 @@ import { remToPx } from '../utils/utils';
 if (document.querySelector('.clients__slider')) {
   new Swiper('.clients__slider', {
     modules: [Autoplay],
-    speed: 800,
+    speed: 4000,
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 40,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       768: {
         slidesPerView: 5,
@@ -87,13 +91,20 @@ if (document.querySelector('.project-modal__slider')) {
 
 const initSliderOnResize = () => {
   if (document.querySelector('.numbers__slider') && window.innerWidth <= 768) {
-    console.log('log');
     new Swiper('.numbers__slider', {
-      modules: [],
-      speed: 800,
+      modules: [Autoplay],
+      speed: 4000,
       loop: true,
-      spaceBetween: 74,
-      slidesPerView: 'auto',
+      spaceBetween: 24,
+      slidesPerView: 2,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        spaceBetween: 74,
+        slidesPerView: 'auto',
+      },
     });
   }
 };

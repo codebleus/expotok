@@ -188,6 +188,12 @@ body::after {
     }
     .swiper-slide {
       width: 16rem;
+      border: 2px solid transparent;
+      transition: border 0.3s ease;
+
+      &.swiper-slide-thumb-active {
+        border: 2px solid $white;
+      }
 
       cursor: pointer;
 

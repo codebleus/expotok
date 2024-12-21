@@ -143,6 +143,13 @@
   &__item {
     .footer__list-wrap & {
       opacity: 0.4;
+      transition: opacity 0.3s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -242,12 +249,21 @@
     display: inline-flex;
     align-items: center;
     column-gap: 1.6rem;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .contacts-footer__item-txt {
+          color: $red;
+        }
+      }
+    }
   }
 
   // .contacts-footer__item-txt
 
   &__item-txt {
     font-weight: 500;
+    transition: color 0.3s ease;
   }
 
   // .contacts-footer__link
@@ -255,10 +271,21 @@
   &__link {
     opacity: 0.4;
 
+    &_base {
+      transition: opacity 0.3s ease;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
     @media (max-width: 48em) {
       &_base {
         font-size: 3.2rem;
         line-height: 130%;
+
+        transition: opacity 0.3s ease;
       }
     }
   }

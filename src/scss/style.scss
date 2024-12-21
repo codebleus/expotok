@@ -63,6 +63,11 @@ $gray: #3d3d3d;
   }
 }
 
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 ymaps canvas {
   filter: grayscale(1);
 }

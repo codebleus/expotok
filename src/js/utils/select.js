@@ -505,13 +505,15 @@ export class Select {
         this.getData(relativeSel).elements[0].dataset.optClass
           ? ` ${this.getData(relativeSel).elements[0].dataset.optClass}`
           : '';
-      return `<button type="button" class="${this.classes.TITLE}"><span ${
+      return `<button type="button" class="${
+        this.classes.TITLE
+      }"><span data-placeholder="${relativeSel.dataset.placeholder}" ${
         attr ? attr : ''
       } class="${this.classes.VALUE} ${
         attrClass ? attrClass : ''
-      }"><span class="${
-        this.classes.CONTENT
-      }${customClass}">${titleVal}</span></span></button>`;
+      }"><span class="${this.classes.CONTENT}${customClass}">${titleVal}</span>
+      <span class="select__remove-btn"></span>
+      </span></button>`;
     }
   }
   // get options
@@ -570,10 +572,10 @@ export class Select {
       ? `target="_blank"`
       : '';
     let optionHTML = ``;
-
+    console.log(relativeSel.dataset.placeholder);
     optionHTML += optionLink
       ? `<a ${optionLinkTarget} ${showSelection} href="${optionLink}" data-opt-val="${option.value}" class="${this.classes.OPTION}${optionClass}${selections}">`
-      : `<button ${showSelection} class="${this.classes.OPTION}${optionClass}${selections}" data-opt-val="${option.value}" type="button">`;
+      : `<button  ${showSelection}  class="${this.classes.OPTION}${optionClass}${selections}" data-opt-val="${option.value}" type="button">`;
     optionHTML += this.getContent(option);
     optionHTML += optionLink ? `</a>` : `</button>`;
     return optionHTML;
@@ -695,8 +697,29 @@ document.addEventListener('selection', function (e) {
     e.detail.select.nextElementSibling &&
     e.detail.select.nextElementSibling.querySelector('.select__content')
   ) {
-    const content =
-      e.detail.select.nextElementSibling.querySelector('.select__content');
+    const select = e.detail.select;
+    const content = select.nextElementSibling.querySelector('.select__content');
     content.innerText = content.innerText.trim().split(',').join(', ');
+
+    if (content.innerText.trim() === '') {
+      select.parentElement.classList.remove('_is-filled');
+      select.dataset.placeholder.length &&
+        (content.innerText = select.dataset.placeholder);
+    }
+  }
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest('.select__remove-btn')) {
+    const sel = e.target.closest('.select');
+    sel.classList.remove('_is-filled');
+    sel.querySelectorAll('option').forEach((option, idx) => {
+      option.removeAttribute('selected');
+      option.selected = false;
+      sel
+        .querySelectorAll(`.select__option`)
+        [idx].classList.remove('_is-selected');
+    });
+    sel.querySelector('.select__value').innerText = '';
+    sel.classList.remove('_is-opened');
   }
 });
