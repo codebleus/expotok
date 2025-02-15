@@ -6,6 +6,7 @@ import './lib/swiper.js';
 import './lib/mask/mask';
 import './lib/nouislider.js';
 import './lib/map.js';
+import './lib/inputmask.js';
 
 import './utils/script.js';
 import './utils/form.js';

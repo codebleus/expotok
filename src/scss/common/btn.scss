@@ -83,6 +83,10 @@
 
       background-color: transparent;
 
+      @media (min-width: 767.1px) {
+        padding-right: 1.5rem;
+      }
+
       @media (max-width: 48em) {
         padding-left: 3.5rem;
 

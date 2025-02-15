@@ -22,6 +22,11 @@ input:focus {
     .field__input {
       color: $white;
       border: 2px solid $white;
+
+      .modal & {
+        color: $txtColor;
+        border: 2px solid $txtColor;
+      }
     }
   }
 
@@ -63,6 +68,11 @@ input:focus {
     &:focus {
       color: $white;
       border: 2px solid $white;
+
+      .modal & {
+        color: $txtColor;
+        border: 2px solid $txtColor;
+      }
     }
 
     @media (max-width: 48em) {

@@ -507,9 +507,9 @@ export class Select {
           : '';
       return `<button type="button" class="${
         this.classes.TITLE
-      }"><span data-placeholder="${relativeSel.dataset.placeholder}" ${
-        attr ? attr : ''
-      } class="${this.classes.VALUE} ${
+      }"><span data-placeholder="${
+        relativeSel.dataset.placeholder
+      }" ${attr} class="${this.classes.VALUE} ${
         attrClass ? attrClass : ''
       }"><span class="${this.classes.CONTENT}${customClass}">${titleVal}</span>
       <span class="select__remove-btn"></span>
@@ -703,8 +703,8 @@ document.addEventListener('selection', function (e) {
 
     if (content.innerText.trim() === '') {
       select.parentElement.classList.remove('_is-filled');
-      select.dataset.placeholder.length &&
-        (content.innerText = select.dataset.placeholder);
+      // select.dataset.placeholder.length &&
+      //   (content.innerText = select.dataset.placeholder);
     }
   }
 });
