@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
         range: {
           min: 0,
-          max: 500,
+          max: 1000,
         },
       });
     });

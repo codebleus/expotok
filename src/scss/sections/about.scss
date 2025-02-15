@@ -87,6 +87,8 @@
     flex-direction: column;
 
     @media (min-width: 48em) {
+      row-gap: 3rem;
+
       &:last-child {
         padding-bottom: 1rem;
       }
@@ -179,8 +181,8 @@
   &__heading {
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 5.8rem;
-    line-height: 7.1rem;
+    font-size: 4rem;
+    line-height: 120%;
     text-transform: uppercase;
 
     color: #ed1c24;
@@ -289,8 +291,9 @@
   &__wrapper {
     @media (min-width: 48em) {
       &.swiper-wrapper {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
       }
     }
   }

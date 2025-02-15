@@ -249,6 +249,10 @@
     height: 26rem;
     width: 18.4rem;
 
+    @media (min-width: 48.01em) {
+      flex: 0 0 18.4rem;
+    }
+
     @media (max-width: 48em) {
       width: 36.8rem;
       height: 52rem;
