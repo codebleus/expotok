@@ -1,23 +1,24 @@
 .footer {
   padding-top: 20rem;
-  padding-bottom: 3rem;
 
   color: $white;
 
   background-color: $gray;
 
-  @media (max-width: 48em) {
-    padding-bottom: 12rem;
-  }
-
   // .footer__container
 
   &__container {
+    padding-bottom: 3rem;
+
     display: flex;
     column-gap: 4rem;
 
     @media (max-width: 48em) {
       flex-direction: column;
+
+      &.container {
+        padding-bottom: 6rem;
+      }
     }
   }
 
@@ -198,6 +199,43 @@
   // .footer__contacts
 
   &__contacts {
+  }
+}
+
+.developer {
+  border-top: 0.1rem solid $white;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  background-color: $gray;
+
+  // .developer__container
+
+  &__container {
+  }
+
+  // .developer__wrap
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .svg-l {
+      fill: $gray;
+    }
+
+    .svg-p {
+      fill: $white;
+    }
+
+    svg {
+      width: 30rem;
+
+      @media (max-width: 48em) {
+        width: 60rem;
+      }
+    }
   }
 }
 

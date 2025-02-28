@@ -25,6 +25,8 @@
   // .entertaiment__list
 
   &__list {
+    margin-bottom: 2rem;
+
     display: flex;
     flex-direction: column;
     row-gap: 1.6rem;
@@ -91,6 +93,11 @@
 }
 
 .item-entertaiment {
+  &:not(:last-child:first-child) {
+    .item-entertaiment__inner {
+      border-bottom: 1px solid rgba(14, 14, 14, 20);
+    }
+  }
   // .item-entertaiment__inner
 
   &__inner {
@@ -99,7 +106,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 1.6rem;
-    border-bottom: 1px solid rgba(14, 14, 14, 20);
 
     @media (max-width: 48em) {
       padding-bottom: 3.2rem;

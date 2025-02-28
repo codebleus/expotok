@@ -11,4 +11,5 @@ import './lib/inputmask.js';
 import './utils/script.js';
 import './utils/form.js';
 import './utils/modals.js';
+import './utils/quantity.js';
 import './utils/select.js';

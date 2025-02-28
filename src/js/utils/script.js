@@ -43,4 +43,12 @@ window.addEventListener('load', function () {
         document.documentElement.classList.remove('_show-filters');
       });
   }
+
+  if (document.querySelector('.catalog')) {
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.item-catalog__btn')) {
+        e.target.closest('.item-catalog').classList.add('_is-selected');
+      }
+    });
+  }
 });
