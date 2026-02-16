@@ -1,9 +1,9 @@
-import Inputmask from 'inputmask';
+import Inputmask from "inputmask";
 
 // --------------------------------------------------------------------------
 
 const handleOnIncomplete = input => {
-  input.value = '';
+  input.value = "";
   //   if (input.closest('.field')) {
   //     addError(input.closest('.field'), input.closest('form'));
   //   }
@@ -11,21 +11,18 @@ const handleOnIncomplete = input => {
 
 const initInputmask = () => {
   const telInputCollection = document.querySelectorAll('input[type="tel"]');
-  const mailInputCollection = document.querySelectorAll('[data-mail-mask]');
-  const nameInputCollection = document.querySelectorAll('[data-name-mask]');
+  const mailInputCollection = document.querySelectorAll("[data-mail-mask]");
+  const nameInputCollection = document.querySelectorAll("[data-name-mask]");
 
   if (telInputCollection.length) {
     telInputCollection.forEach(input => {
       Inputmask({
-        mask: '+7 (999) 999-99-99',
+        mask: "+7 (999) 999-99-99",
         showMaskOnHover: false,
-        jitMasking: true,
-        onincomplete: function () {
-          handleOnIncomplete(input);
-        },
-        oncomplete: function () {
-          // handleOnComplete(input);
-        },
+        showMaskOnFocus: true,
+        jitMasking: false,
+        clearIncomplete: true,
+        placeholder: "_",
       }).mask(input);
     });
   }
